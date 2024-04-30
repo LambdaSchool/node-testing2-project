@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=testing jest --verbose --watchAll",
+    "test": "cross-env NODE_ENV=testing jest --verbose --watchAll --runInBand",
     "start": "node index.js",
     "server": "nodemon index.js",
     "rollback": "knex migrate:rollback",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",
+    "@types/jest": "^29.5.12",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "eslint": "^8.36.0",
